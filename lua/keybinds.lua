@@ -37,7 +37,26 @@ map('n', '<leader>[', '<cmd>-quit<CR>', opt) -- Close Previous Window
 
 map('n', '<leader>a', '<cmd>only<CR>', opt)  -- Close all window except the current active window
 
+
+
+-- Resizing windows
+
+map('n', '<leader>=', '<cmd>vertical wincmd =<CR>', opt)
+map('n', '<leader>-', '<cmd>horizontal wincmd =<CR>', opt)
+map('n', '<leader>W', '<cmd>:resize +2<CR>', opt)
+map('n', '<leader>S', '<cmd>:resize -2<CR>', opt)
+map('n', '<leader>D', '<cmd>:vertical resize +2<CR>', opt)
+map('n', '<leader>A', '<cmd>:vertical resize -2<CR>', opt)
+
 -- ✦────────────────── BUFFER KEYMAPS ──────────────────✦
+
+
+
+
+-- ✦────────────────── Flutter KEYMAPS ──────────────────✦
+map('n', '<leader>r', '<cmd>CocCommand flutter.run<CR>', opt)
+map('n', '<leader>R', '<cmd>CocCommand flutter.provider.hot-reload<CR>', opt)
+-- ✦────────────────── Flutter KEYMAPS ──────────────────✦
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.tabstop = 4
